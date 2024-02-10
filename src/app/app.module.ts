@@ -7,7 +7,6 @@ import { BannerComponent } from './ui/banner/banner.component';
 import { HeaderComponent } from './ui/header/header.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { MenuComponent } from './ui/menu/menu.component';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { TestComponent } from './test/test.component';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    TestComponent
   ],
   imports: [
     BrowserModule,
