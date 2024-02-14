@@ -1,1 +1,5 @@
 <router-outlet></router-outlet>
+<button *ngFor="let themeName of theme.themeNames" (click)="theme.set(themeName)"
+    [class.active]="theme.activeTheme === themeName">
+    {{ themeName }}
+</button>

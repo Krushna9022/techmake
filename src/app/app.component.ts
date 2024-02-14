@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemesService } from './services/themes.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'techmake';
+  
+  constructor(protected theme: ThemesService) {}
+
+  ngOnInit() {
+    this.theme.set('light');
+  }
 }
