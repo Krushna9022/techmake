@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ThemesService } from './services/themes.service';
+import { Component, InjectionToken } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +6,6 @@ import { ThemesService } from './services/themes.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  constructor(protected theme: ThemesService) {}
 
-  ngOnInit() {
-    this.theme.set('light');
-  }
 }
+
