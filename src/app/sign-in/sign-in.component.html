@@ -1,0 +1,23 @@
+<div class="main-part display-medium">
+
+  <div class="details">
+
+
+    <i mat-button (click)="openDialog()" class="fa-solid fa-xmark"></i>
+    <h1 class="display-medium"> Sign in with email</h1>
+
+    <p class="body-large"> Enter the email address associated with <br> your account ,and we'll send a magic link to
+      <br> your inbox.
+    </p>
+
+    <form class="input-email">
+      <label class="body-large" for="email"> Your Email</label>
+      <input class="btn-input" type="email" id="email" name="email" required>
+      <input class=" btn-submit primary-container" type="submit" value="Continue">
+    </form>
+  
+    <a class="headline-small " routerLinkActive="active" routerLink="registration"> <i
+        class="fa-solid fa-less-than"></i> See all sign in
+      options</a>
+  </div>
+</div>

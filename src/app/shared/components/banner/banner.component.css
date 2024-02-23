@@ -1,0 +1,28 @@
+
+.banner {
+    height: 9.89vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 215, 239, 1);
+    color: black;
+}
+
+.announcement {
+    padding: 1rem 1.12rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(120, 83, 107, 1);
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.main-nav-bar p {
+    display: inline-block;
+    margin: 0.5rem;
+}
+.close-b{
+    position: absolute;
+    right: 1%;
+    top: 2.5%;
+}

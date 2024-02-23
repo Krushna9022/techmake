@@ -1,0 +1,37 @@
+<div class="main-part display-medium">
+    <div class="parent">
+        <button mat-button (click)="closeDialog()"><i class="fa-solid fa-xmark"></i></button>
+        <h1 class="display-medium"> Welcome Back</h1>
+        <div class="child">
+            <div class="login-links">
+                <i class="fa-brands fa-google"></i>
+                <a class="login-link headline-small" href="#"> Sign in with Google</a>
+            </div>
+            <div class="login-links">
+                <i class="fa-brands fa-facebook"></i>
+                <a class="login-link headline-small"> Sign in with facebook</a>
+            </div>
+            <div class="login-links">
+                <i class="fa-brands fa-apple"></i>
+                <a class="login-link headline-small"> Sign in with Apple</a>
+            </div>
+            <div class="login-links">
+                <i class="fa-brands fa-twitter"></i>
+                <a class="login-link headline-small"> Sign in with X (Twitter) </a>
+            </div>
+            <div class="login-links">
+                <i class="fa-solid fa-envelope"></i>
+                <a class="login-link headline-small" routerLink="/sign-in" mat-button (click)="openDialog()">
+                    Sign in with email</a>
+            </div>
+            <div class="create-one headline-small">
+                <span> Dont have an account ? <a class="headline-small" href="#"> Create One</a></span>
+            </div>
+        </div>
+        <p class="get-help body-medium"> Forget email or trouble signing in? <a class="body-medium" href="#"> Get Help</a></p>
+        <p class="click-tech body-medium">Click " Sign in " to agree to techmake's <a class="body-medium" href="#"> Terms of service</a> and acknowledge that <br>
+            Techmake's
+            <a class="body-medium" href="#"> Privacy Policy</a> applies to you
+        </p>
+    </div>
+</div>
