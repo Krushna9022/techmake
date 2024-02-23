@@ -1,0 +1,37 @@
+.bg-img {
+    background-image: url("../../../assets/Landing pg.png");
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.container {
+    display: block;
+    margin-top: 18rem;
+    margin-left: 3.5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: white;
+}
+
+.content {
+    font-size: 2rem;
+    color: white;
+}
+
+.button {
+    font-size: 18px;
+    width: 9rem;
+    height: 3.125rem;
+}
+
+.title,
+.content {
+    margin: 0;
+    padding: 1rem;
+}
