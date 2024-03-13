@@ -8,6 +8,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { HttpClientModule } from '@angular/common/http'
+import { DataService } from './data.service';
 
 
 
@@ -24,8 +26,9 @@ import { AboutComponent } from './components/about/about.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

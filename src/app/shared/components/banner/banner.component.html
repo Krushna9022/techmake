@@ -1,8 +1,7 @@
 <nav *ngIf="showBanner" class="banner">
     <div>
         <div class="main-nav-bar body-large">
-
-            <a class="announcement"> Explore More!</a>
+            <a class="announcement" *ngFor="let link of bannerLinks">{{ link }}</a>
             <p>This site is under construction. We appreciate your patience.</p>
         </div>
     </div>

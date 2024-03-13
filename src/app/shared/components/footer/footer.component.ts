@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  footerLinks: string[] = [];
 
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(): void {
+    this.getFooterLinks();
+  }
+
+  getFooterLinks(): void {
+    this.dataService.getFooterLinks().subscribe(
+      (links) => {
+        this.footerLinks = links;
+      }
+    );
+  }
 }
