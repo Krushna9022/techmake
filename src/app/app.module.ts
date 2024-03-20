@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http'
 import { DataService } from './data.service';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,13 +23,17 @@ import { DataService } from './data.service';
     SignInComponent,
     HomeComponent,
     AboutComponent,
+    LogInComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

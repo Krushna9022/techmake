@@ -1,15 +1,15 @@
-<div class="main-part display-medium">
+<div class="main-part display-medium on-tertiary">
     <div class="parent">
-        <button mat-button (click)="closeDialog()"><i class="fa-solid fa-xmark"></i></button>
-        <h1 class="display-medium"> Welcome Back</h1>
-        <div class="child">
-            <div class="login-links">
+        <i mat-button (click)=" closeDialog()" class="fa-solid fa-xmark secondary-text"></i>
+        <h1 class="display-medium  on-secondary-container-text"> Welcome Back</h1>
+        <div class="child  on-secondary-container-text">
+            <div class="login-links ">
                 <i class="fa-brands fa-google"></i>
-                <a class="login-link headline-small" href="#"> Sign in with Google</a>
+                <button class="login-link headline-small  on-secondary-container-text"> Sign in with Google</button>
             </div>
             <div class="login-links">
                 <i class="fa-brands fa-facebook"></i>
-                <a class="login-link headline-small"> Sign in with facebook</a>
+                <a class="login-link headline-small "> Sign in with facebook</a>
             </div>
             <div class="login-links">
                 <i class="fa-brands fa-apple"></i>
@@ -21,17 +21,23 @@
             </div>
             <div class="login-links">
                 <i class="fa-solid fa-envelope"></i>
-                <a class="login-link headline-small" routerLink="/sign-in" mat-button (click)="openDialog()">
-                    Sign in with email</a>
+                <button class="login-link headline-small  on-secondary-container-text" (click)="openDialog1()">
+                    Sign in with email</button>
             </div>
-            <div class="create-one headline-small">
-                <span> Dont have an account ? <a class="headline-small" href="#"> Create One</a></span>
+            <div class="create-one headline-small  on-primary-container-text">
+                <span> Dont have an account ? <button (click)="openDialog2()"
+                        class="headline-small  on-primary-container-text "> Create
+                        One</button></span>
             </div>
         </div>
-        <p class="get-help body-medium"> Forget email or trouble signing in? <a class="body-medium" href="#"> Get Help</a></p>
-        <p class="click-tech body-medium">Click " Sign in " to agree to techmake's <a class="body-medium" href="#"> Terms of service</a> and acknowledge that <br>
+        <p class="get-help body-medium  on-secondary-container-text"> Forget email or trouble signing in? <a
+                class="body-medium  on-secondary-container-text" href="#"> Get
+                Help</a></p>
+        <p class="click-tech body-medium  on-secondary-container-text">Click " Sign in " to agree to techmake's <a
+                class="body-medium  on-secondary-container-text" href="#">
+                Terms of service</a> and acknowledge that <br>
             Techmake's
-            <a class="body-medium" href="#"> Privacy Policy</a> applies to you
+            <a class="body-medium  on-secondary-container-text" href="#"> Privacy Policy</a> applies to you
         </p>
     </div>
 </div>

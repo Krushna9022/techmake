@@ -7,29 +7,18 @@
     text-align: center;
 }
 
-.fa-xmark {
-    display: flex;
-    position: absolute;
-    right: 2rem;
-    top: 1.25rem;
-    font-size: 3rem;
-}
 
 .display-medium {
     margin-top: 3.5rem;
-    color: rgba(0, 0, 0, 1);
     margin-bottom: 0;
 }
 
 .details p {
-    color: rgba(0, 0, 0, 1);
     margin-top: 1.75rem;
 }
 
 .body-large {
     margin-top: 4.5rem;
-    color: rgba(0, 0, 0, 1);
-
 }
 
 .input-email {
@@ -41,27 +30,21 @@
 .btn-input {
     margin-top: 3.87rem;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid;
     outline: none;
     width: 20vw;
     text-align: center;
-    font-size: 1.37rem;
-    color: rgba(0, 0, 0, 1);
-
 }
 
 .btn-submit {
     margin-top: 1.12rem;
     padding: 0.75rem 2rem;
     border-radius: 24px;
-    color: rgba(255, 255, 255, 1);
-    font-size: 1.12rem;
 }
 
 .headline-small {
     margin-top: 1.5rem;
-    color: rgba(67, 83, 255, 1);
-
+    cursor: pointer;
 }
 
 .fa-xmark {
@@ -69,6 +52,4 @@
     position: absolute;
     right: 2rem;
     top: 1.25rem;
-    font-size: 2rem;
-    color: rgba(186, 186, 186, 1);
 }
