@@ -1,18 +1,46 @@
 <header class="body-medium">
-    <nav class="navdiv">
-        <div class="logo"><a routerLink="/"><img src="assets/logo.jpg" alt="logo"></a></div>
-        <div class="nav-link">
-            <ul>
-                <li ><a class="on-primary-container-text" routerLink="/ourstory">Our Story</a></li>
-                <li><a  class="on-primary-container-text"routerLink="/category">Category</a></li>
-                <li><a class="on-primary-container-text"routerLink="/services">Our Service</a></li>
-                <li><a class="on-primary-container-text"routerLink="/about">About Us</a></li>
-                <li><a class="on-primary-container-text" routerLink="/contact">Contact Us</a></li>
-            </ul>
-            <button  (click)="openDialog()"
-                class="primary-button  primary-container on-primary-container-text body-medium">
-                Profile
-            </button>
+    
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a routerLink="/">
+                    <img class="logo" src="../../../../assets/logo.svg" alt="">
+                Techmake
+                </a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a routerLink="/about" >Write blogs</a>
+                    </li>
+                    <li class="nav-link">
+                        <a routerLink="/category">Category</a>
+                    </li>
+                    <li class="nav-link">
+                        <a routerLink="/ourstory">Our story</a>
+                    </li>
+                    <li class="nav-link">
+                        <a routerLink="/services">Our services</a>
+                    </li>
+                    <li class="nav-link">
+                        <a  routerLink="/contact">Contact Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a  (click)="openDialog()" class="sign-in">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
     </nav>
 </header>

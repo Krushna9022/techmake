@@ -9,6 +9,9 @@ html body {
     padding: 0;
     height: auto;
     width: auto;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .main-part {

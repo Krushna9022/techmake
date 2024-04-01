@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/data.service';
-
 
 @Component({
   selector: 'app-banner',
@@ -9,21 +7,16 @@ import { DataService } from 'src/app/data.service';
 })
 
 export class BannerComponent implements OnInit {
-  bannerLinks: string[] = [];
-  showBanner: boolean = true; // Assuming you want to show the banner by default
+  showBanner: boolean = true;
 
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.getBannerLinks();
-  }
+  ngOnInit() {
 
-  getBannerLinks(): void {
-    this.dataService.getBannerLinks().subscribe(
-      (links) => {
-        this.bannerLinks = links;
-      }     
-    );
+    setTimeout(() => {
+
+      this.showBanner = false;
+    }, 5000);
   }
 
 }

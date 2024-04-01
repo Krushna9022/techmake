@@ -178,3 +178,21 @@
 .scrim-text {
   color: var(--md-sys-color-scrim);
 }
+.sky{
+  background-color: var( --sky);
+}
+.bg-color{
+  background-color: var( --bg-color);
+}
+.text-gray{
+ color: var(--text-gray);
+}
+.text-light{
+  color: var(--text-light);
+}
+.white{
+  color:var( --white);
+}
+.midnight{
+  color: var( --midnight);
+}

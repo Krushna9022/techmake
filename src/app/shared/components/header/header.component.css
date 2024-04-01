@@ -1,33 +1,145 @@
-.navdiv {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    position: fixed;
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.flex-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 10px;
-}
-
-img {
-    margin-top: 1.1rem;
-    margin-left: 3rem;
-    height: 60px;
-}
-
-ul li {
+ul {
     list-style-type: none;
-    display: inline;
-    margin: 1rem;
 }
-.primary-button {
-    margin-bottom: .7rem;
-    margin-right: 4rem;
-    height: 2.5rem;
-    width: 6rem;
+
+h1 {
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--Lexend);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 5vw 5vw;
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+p {
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+.nav {
+    background: #4353FF;
+    padding: 0 2rem;
+    min-height: 10vh;
+    overflow: hidden;
+    position: fixed;
+    width: 96%;
+    z-index: 1;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link .sign-in{
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav .nav-items .nav-link a:hover {
+    font-weight: bold;
+    font-size: large;
+    border-bottom: 1px solid white;
+}
+
+.nav .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: flex;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
+    align-items: center;
+    align-self: center;
+}
+
+.nav .nav-brand a img {
+    width: 100px;
+    height: 40px;
+}
+
+.nav .social {
+    padding: 1.4rem 0
+}
+
+.nav .social i {
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover {
+    color: #dddddd;
 }

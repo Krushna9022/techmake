@@ -164,6 +164,13 @@
   --md-sys-color-surface-tint-dark: #bdc2ff;
   --md-sys-color-outline-variant-dark: #46464f;
   --md-sys-color-scrim-dark: #000000;
+  /* sky */
+  --sky: linear-gradient(120deg, #4353FF 0%, #c2e9fb 100%);
+  --text-gray: #3f4954;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --midnight: #104f55;
   /* display - large */
   --md-sys-typescale-display-large-font-family-name: Roboto;
   --md-sys-typescale-display-large-font-family-style: Regular;
