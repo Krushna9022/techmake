@@ -1,6 +1,6 @@
 a {
     text-decoration: none;
-    color: var(--white);
+
 }
 
 .flex-row {
@@ -14,16 +14,12 @@ ul {
 }
 
 h1 {
-    font-family: var(--Lexend);
+
     font-size: 2.5rem;
 }
 
-h2 {
-    font-family: var(--Lexend);
-}
-
 h3 {
-    font-family: var(--Abel);
+
     font-size: 1.3rem;
 }
 
@@ -32,12 +28,7 @@ button.btn {
     border-radius: 2rem;
     padding: 1rem 3rem;
     font-size: 1rem;
-    font-family: var(--Livvic);
     cursor: pointer;
-}
-
-span {
-    font-family: var(--Abel);
 }
 
 .container {
@@ -101,7 +92,8 @@ main .site-title .btn:hover {
 /* --------x------ Site title --------x------- */
 
 /* --------------- Blog Carousel ------------ */
-.treding-topic{
+
+.treding-topic {
     display: flex;
     align-items: center;
     text-align: center;
@@ -109,9 +101,12 @@ main .site-title .btn:hover {
     padding: 0 20rem;
     padding-top: 1rem;
 }
-.treding-topic i{
+
+
+.treding-topic i {
     font-size: 2.5rem;
 }
+
 main .blog {
     background-repeat: no-repeat;
     background-position: right;
@@ -133,6 +128,7 @@ main .blog-post .blog-content {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
+
 .owl-carousel{
     display: flex;
 }
@@ -343,5 +339,3 @@ main .post-content .post-title a {
 
 
 /* -------x------- Sidebar -----------x----------- */
-
-/* ---------x------- Main Content -----x----- */

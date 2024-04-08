@@ -13,31 +13,16 @@ ul {
     list-style-type: none;
 }
 
-h1 {
-    font-family: var(--Lexend);
-    font-size: 2.5rem;
-}
 
-h2 {
-    font-family: var(--Lexend);
-}
 
-h3 {
-    font-family: var(--Abel);
-    font-size: 1.3rem;
-}
+
 
 button.btn {
     border: none;
     border-radius: 2rem;
     padding: 1rem 3rem;
     font-size: 1rem;
-    font-family: var(--Livvic);
     cursor: pointer;
-}
-
-span {
-    font-family: var(--Abel);
 }
 
 .container {
@@ -49,7 +34,6 @@ span {
 }
 
 p {
-    font-family: var(--Lexend);
     color: var(--text-light);
 }
 
@@ -100,7 +84,6 @@ p {
     padding: 1.6rem 1rem;
     font-size: 1.1rem;
     position: relative;
-    font-family: var(--Abel);
     font-size: 1.1rem;
 }
 
@@ -121,7 +104,6 @@ p {
     font-size: 1.6rem;
     padding: 1rem 0;
     display: flex;
-    font-family: var(--Lexend);
     font-size: 1.6rem;
     align-items: center;
     align-self: center;
