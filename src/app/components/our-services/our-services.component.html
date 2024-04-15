@@ -1,1 +1,11 @@
 <h1>welcome to our services</h1>
+<div>
+    <h3>Services Links</h3>
+    <ul>
+      <li *ngFor="let link of ourservice?.services">
+        <a href="{{ link.link }}">{{ link.text }} valid from-{{link.vaildFrom}}- valid till{{link.vaildTill}} </a> 
+      </li>
+    </ul>
+  </div>
+
+ 

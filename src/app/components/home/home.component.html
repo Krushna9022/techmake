@@ -175,12 +175,12 @@
                 </div>
             </div>
             <aside class="sidebar">
-                <div class="category" *ngIf="data">
+                <div class="category" *ngIf="handshakeResponse">
                     <h2>Category</h2>
                     <ul class="category-list">
-                        <li *ngFor="let item of data" class="list-items" data-aos="fade-left" data-aos-delay="100">
-                            <a href="#"> {{ item.name }}</a>
-                            <span> {{ item.desc}}</span>
+                        <li *ngFor="let link of handshakeResponse.topCategory " class="list-items" data-aos="fade-left" data-aos-delay="100">
+                            <a href="#"> {{ link.name }}</a>
+                            
                         </li>
                     </ul>
                 </div>

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { HandshakeResponse } from './HandshakeResponse';
 
 
 @Injectable({
@@ -12,14 +13,9 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getBannerLinks(): Observable<string[]> {
-    const bannerUrl = `${this.apiUrl}/banner`;
-    return this.http.get<string[]>(bannerUrl);
-  }
-
-  getFooterLinks(): Observable<string[]> {
-    const footerUrl = `${this.apiUrl}/footer`
-    return this.http.get<string[]>(footerUrl);
+  getHandshakeResponse(): Observable<HandshakeResponse> {
+    const handshake = `${this.apiUrl}/handshake/`;
+    return this.http.get<HandshakeResponse>(handshake);
   }
 
   getRecentBlogs(): Observable<string[]> {

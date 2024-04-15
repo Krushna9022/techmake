@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HandshakeResponse } from 'src/app/HandshakeResponse';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -7,19 +8,31 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  footerLinks: string[] = [];
+  footersocialLinks: HandshakeResponse | undefined
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.getFooterLinks();
+    this.getHandshakeResponse()
   }
-
-  getFooterLinks(): void {
-    this.dataService.getFooterLinks().subscribe(
-      (links) => {
-        this.footerLinks = links;
-      }
-    );
+  getHandshakeResponse():void{
+    this.dataService.getHandshakeResponse().subscribe(
+      response=>{this.footersocialLinks=response}
+    )
   }
+  getSocialMediaIcon(link: string): string {
+    switch (link.toLowerCase()) {
+      case 'facebook.com':
+        return 'facebook-f';
+      case 'instagram.com':
+        return 'instagram';
+      case 'twitter.com':
+        return 'twitter';
+      case 'youtube.com':
+        return 'youtube';
+      default:
+        return '';
+    }
+  }
+  
 }

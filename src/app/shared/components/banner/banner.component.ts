@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HandshakeResponse } from 'src/app/HandshakeResponse';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-banner',
@@ -8,15 +10,23 @@ import { Component, OnInit } from '@angular/core';
 
 export class BannerComponent implements OnInit {
   showBanner: boolean = true;
-
-  constructor() { }
+  banner:HandshakeResponse | undefined
+  constructor(private bannerservice:DataService) { }
 
   ngOnInit() {
-
+    this.getHandshakeResponse();
     setTimeout(() => {
 
-      this.showBanner = false;
+      this.showBanner = true;
     }, 5000);
+  }
+   getHandshakeResponse():void{
+    this.bannerservice.getHandshakeResponse().subscribe(
+      response=>{
+        this.banner=response
+      },
+      error=>console.log("error",error)
+    )
   }
 
 }

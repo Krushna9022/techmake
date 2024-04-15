@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
+import { HandshakeResponse } from 'src/app/HandshakeResponse';
 import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-home',
@@ -7,19 +8,25 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  data: any;
+
+  handshakeResponse: HandshakeResponse | undefined;
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     Aos.init();
+    this.getHandshakeResponse();
 
-    this.dataService.getCategory().subscribe(
-      (data) => {
-
-        this.data = data;
-        console.log(data);
+  }
+  getHandshakeResponse(): void {
+    this.dataService.getHandshakeResponse().subscribe(
+      response => {
+        this.handshakeResponse = response;
       },
-
+      error => {
+        console.error('Error fetching handshake data:', error);
+      }
     );
   }
+
 }
