@@ -13,7 +13,9 @@ import { DataService } from './data.service';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
+
 
 
 
@@ -25,6 +27,7 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     HomeComponent,
     AboutComponent,
     LogInComponent,
+    ContactUsComponent,
     OurServicesComponent
   ],
   imports: [

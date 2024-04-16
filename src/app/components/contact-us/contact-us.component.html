@@ -1,1 +1,38 @@
-<h1>contact us</h1>
+<div class="img">
+    <h1>Contact TechMake Outdoors</h1>
+    <div class="contact">
+        <div class="support">
+            <i class="fa-regular fa-message"></i>
+            <h3>contact US</h3>
+            <p>Just want to say hi? We'd lova to hear from you . we lova our customers and community!</p>
+            <button>Send us a message</button>
+        </div>
+        <div class="support">
+            <i class="fa-regular fa-message"></i>
+            <h3>Get Support</h3>
+            <p>Have an issue with an order or with a product you purchased from us? Fill out our support from.</p>
+            <button>Send us a message</button>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+   
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: your-emailexampleg.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Street, City, Country</p>
+            <p> General Inquiries : (405) 555-555-5555</p>
+            <p> General Inquiries : (405) 555-555-5556</p>
+        </div>
+
+        <form #contactus="ngForm" (ngSubmit)="onSubmit(contactus)">
+            <h2>Send Us a Message</h2>
+            <input type="text" name="name" placeholder="Your Name" ngModel required />
+            <input type="email" name="email" placeholder="Your Email" ngModel required email />
+            <textarea name="message" placeholder="Your Message" ngModel required></textarea>
+            <input type="submit" value="Send Message">
+          </form>
+	</div>
+  

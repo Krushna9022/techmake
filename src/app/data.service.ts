@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ContactUs } from './model/ContactUs';
 import { HandshakeResponse } from './HandshakeResponse';
-
 
 @Injectable({
   providedIn: 'root'
@@ -32,4 +32,9 @@ export class DataService {
     const category=`${this.apiUrl}/category`;
     return this.http.get<string[]>(category);
   }
+
+  submitContactForm(contactData: ContactUs): Observable<any> {
+    const contactUrl = `${this.apiUrl}/contactus`;
+     return this.http.post<any>(contactUrl, contactData);
+   }
 }
