@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ContactUs } from './model/ContactUs';
+import {Blog}from './model/Blog'
 import { HandshakeResponse } from './HandshakeResponse';
+import { ContactUs } from './model/ContactUs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,14 +24,13 @@ export class DataService {
     return this.http.get<string[]>(recentBlogs);
   }
 
-  getTrendingTopic(): Observable<string[]> {
-    const trendingtopic = `${this.apiUrl}/trending-topic`;
-    return this.http.get<string[]>(trendingtopic)
-  }
-
   getCategory(): Observable<string[]> {
     const category=`${this.apiUrl}/category`;
     return this.http.get<string[]>(category);
+  }
+  getTrending(count:number):Observable<Blog[]>{
+    const trending=`${this.apiUrl}/blog/trending/${count}`;
+    return this.http.get<Blog[]>(trending);
   }
 
   submitContactForm(contactData: ContactUs): Observable<any> {

@@ -30,40 +30,15 @@
                     <span class="owl-nav-next " data-aos="fade-left"><i class="fas fa-long-arrow-alt-right"></i></span>
                 </div>
                 <div class="owl-carousel owl-theme blog-post">
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="./assets/blogs/blog1.jpg" alt="post-1">
+                    <div *ngFor="let blog of data" class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                        <img src="{{blog?.images}}" alt="post-1">
                         <div class="blog-title">
-                            <h3>Responsive web designing with HTML & CSS</h3>
-                            <button class="btn btn-blog">HTML/CSS</button>
-                            <span>2 minutes</span>
-                        </div>
-                    </div>
-                    <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
-                        <img src="./assets/blogs/blog2.jpg" alt="post-1">
-                        <div class="blog-title">
-                            <h3>Oops in Typescript, in depth !!!</h3>
-                            <button class="btn btn-blog">Typescript</button>
-                            <span>2 minutes</span>
-                        </div>
-                    </div>
-                    <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
-                        <img src="./assets/blogs/blog3.jpg" alt="post-1">
-                        <div class="blog-title">
-                            <h3>Figma - A new trend of designing</h3>
-                            <button class="btn btn-blog">Figma</button>
-                            <span>2 minutes</span>
-                        </div>
-                    </div>
-                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                        <img src="../../../assets/blogs/blog5.jpg" alt="post-1">
-                        <div class="blog-title">
-                            <h3>Learning is a challenge. Accept it and win</h3>
-                            <button class="btn btn-blog">Java</button>
-                            <span>2 minutes</span>
+                            <h3>{{blog?.title}}</h3>
+                            <button class="btn btn-blog">Read</button>
+                            <span>{{blog?.createdon}}</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -178,9 +153,9 @@
                 <div class="category" *ngIf="handshakeResponse">
                     <h2>Category</h2>
                     <ul class="category-list">
+
                         <li *ngFor="let link of handshakeResponse.topCategory " class="list-items" data-aos="fade-left" data-aos-delay="100">
                             <a href="#"> {{ link.name }}</a>
-                            
                         </li>
                     </ul>
                 </div>
