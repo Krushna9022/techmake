@@ -10,5 +10,5 @@ export interface Blog{
     visited:number;
     updateon:string;
     comments:Comment[];
-    
+
 }

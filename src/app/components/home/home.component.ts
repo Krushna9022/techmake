@@ -11,23 +11,20 @@ import { Blog } from 'src/app/model/Blog';
 export class HomeComponent implements OnInit {
   data: Blog[] = [];
   handshakeResponse: HandshakeResponse | undefined;
-  
+  blog:Blog[]=[]
   constructor(private dataService: DataService) { }
   ngOnInit(): void {
     this.getTrending();
     this.getHandshakeResponse();
+    this.getRecentBlogs();
     Aos.init();
   }
-
   getTrending(): void {
     this.dataService.getTrending(4).subscribe((res) => {
       this.data = res;
     }
     )
-  }
-
-  
-  
+  } 
   getHandshakeResponse(): void {
     this.dataService.getHandshakeResponse().subscribe(
       response => {
@@ -38,6 +35,12 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+ getRecentBlogs():void{
+  this.dataService.getRecentBlogs(5).subscribe(
+    response=>{this.blog=response
+      console.log(response)
+    })
+ }
 
 }
 

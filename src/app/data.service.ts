@@ -4,6 +4,7 @@ import { Observable, } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import {Blog}from './model/Blog'
 import { HandshakeResponse } from './HandshakeResponse';
+import { Blog } from './model/Blog';
 import { ContactUs } from './model/ContactUs';
 
 @Injectable({
@@ -19,9 +20,9 @@ export class DataService {
     return this.http.get<HandshakeResponse>(handshake);
   }
 
-  getRecentBlogs(): Observable<string[]> {
-    const recentBlogs = `${this.apiUrl}/recent-blogs`
-    return this.http.get<string[]>(recentBlogs);
+  getRecentBlogs(count : number): Observable<Blog[]> {
+    const recentBlogs =`${this.apiUrl}/blog/recentblog/${count}`;
+    return this.http.get<Blog[]>(recentBlogs);
   }
 
   getCategory(): Observable<string[]> {

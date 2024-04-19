@@ -1,5 +1,5 @@
-import { Link } from "./Link";
-import { Category } from "./Category "
+import { Link } from "./model/Link";
+import { Category } from "./model/Category "
 
 export interface HandshakeResponse {
     bannerLink: Link;

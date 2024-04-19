@@ -1,6 +1,6 @@
-    export interface Comment {
-        id: string;
-        authorId: string;
-        text: string;
-        Createdon: string; 
-      }
+export interface Comment {
+    id: string;
+    authorId: string;
+    text: string;
+    Createdon: string; 
+  }
